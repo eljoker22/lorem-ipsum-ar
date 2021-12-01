@@ -1,0 +1,40 @@
+/* Chrome, Safari, Edge, Opera */
+.loremCont input::-webkit-outer-spin-button,
+.loremCont input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+.loremCont input[type=number] {
+    -moz-appearance: none;
+    width: 10%;
+}
+.loremCont{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+.loremCont input{
+    font-size: 18px;
+    padding: 8px 15px;
+    outline: 0;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    background: var(--box-color);
+    color: var(--text);
+}
+.loremCont input:focus{
+    border-color: var(--primary-color);
+}
+.loremCont input:first-child{
+    width: 69%;
+}
+.imgGallery{
+    border: 1px solid transparent;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+.imgGallery:hover{
+    border-color: var(--primary-color);
+}

@@ -1,0 +1,100 @@
+.loremCont{
+    margin: 20px 50px 0;
+}
+
+/* Chrome, Safari, Edge, Opera */
+.loremCont input::-webkit-outer-spin-button,
+.loremCont input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+.loremCont input[type=number] {
+    -moz-appearance: none;
+}
+.loremCont input , .inputsFlex select, .resultCont .textCont{
+    font-size: 18px;
+    padding: 8px 15px;
+    outline: 0;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    background-color: var(--box-color);
+    color: var(--text);
+}
+.loremCont input:focus, .inputsFlex select:focus{
+    border-color: var(--primary-color);
+}
+.searchCont{
+    position: relative;
+}
+.searchCont .icon{
+    position: absolute;
+    left: 15px;
+    top: 45%;
+    transform: translateY(-50%);
+}
+.inputSearch{
+    width: 100%;
+    margin-bottom: 10px;
+}
+.inputsFlex{
+    display: flex;
+    justify-content: space-between;
+}
+.inputNumber{
+    width: 9%;
+    text-align: center;
+}
+.inputsFlex select{
+    width: 70%;
+}
+.resultCont{
+    margin: 10px 0;
+}
+.resultCont .textCont{
+    width: 100%;
+    min-height: 200px;
+    background: var(--box-color);
+    max-height: 500px;
+    overflow: auto;
+}
+.resultCont .textCont::-webkit-scrollbar{
+    background: transparent;
+    width: 14px;
+}
+.resultCont .textCont::-webkit-scrollbar-thumb{
+    background: var(--primary-color);
+    width: 14px;
+    border-radius: 5px;
+}
+.tooltip{
+    position: absolute;
+    top: -125%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: max-content;
+    padding: 3px 20px;
+    color: var(--text);
+    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.3);
+    background: #17D7A0;
+    border-radius: 5px;
+    border: 1px solid transparent;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.3s linear;
+    transform-origin: bottom center;
+}
+.tooltip::before{
+    content: ' ';
+    position: absolute;
+    bottom: -7.5px;
+    left: 50%;
+    transform: translateX(-50%) rotate(45deg);
+    width: 15px;
+    height: 15px;
+    background: #17D7A0;
+    border-bottom: 1px solid transparent;
+    border-right: 1px solid transparent;
+    
+}

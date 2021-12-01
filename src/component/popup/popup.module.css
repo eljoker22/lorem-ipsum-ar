@@ -1,0 +1,28 @@
+.overlay{
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(0,0,0,0.7);
+    z-index: 10;
+}
+.popup{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    padding: 15px;
+    border-radius: 10px;
+    background: var(--box-color);
+    box-shadow: 2px 2px 3px var(--primary-color), -2px -2px 3px var(--primary-color);
+    z-index: 11;
+}
+.popup img {
+    max-width: 100%;
+    max-height: 75vh;
+}
+.popup hr{
+    border-color: #585d6a;
+}

@@ -1,0 +1,13 @@
+.homeContainer{
+    text-align: center;
+    margin: 50px auto;
+    width: 800px;
+    min-height: 557px;
+}
+.homeContainer > img {
+    width: 300px;
+    height: auto;
+}
+.btnCont a{
+    text-decoration: none;
+}
