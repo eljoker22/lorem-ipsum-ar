@@ -53,7 +53,7 @@ function ImgLorem() {
 
     return(
         <>
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} style={{margin: '20px 0'}}>
             <div className={classes.loremCont}>
                 <input 
                 type="text"
