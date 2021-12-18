@@ -14,7 +14,7 @@
     transform: translate(-50%, -50%);
     width: 600px;
     padding: 15px;
-    border-radius: 10px;
+    border-radius: 5px;
     background: var(--box-color);
     box-shadow: 2px 2px 3px var(--primary-color), -2px -2px 3px var(--primary-color);
     z-index: 11;
@@ -25,4 +25,9 @@
 }
 .popup hr{
     border-color: #585d6a;
+}
+@media (max-width: 768px){
+    .popup{
+        width: 90%;
+    }
 }

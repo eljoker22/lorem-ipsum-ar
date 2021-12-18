@@ -23,7 +23,7 @@ const copyLink = () => {
                 <img src={imgurl} alt="" />
                 <hr />
                 <ButtonCopy variant="content" onClick={copyLink}>
-                    copy
+                    نسخ رابط الصورة
                 <div className={classTooltip.tooltip} style={{visibility: tooltip ? 'visible' : 'hidden', opacity: tooltip ? '1' : '0'}}>تم النسخ</div>
                 </ButtonCopy>
             </div>
