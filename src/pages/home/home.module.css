@@ -11,3 +11,8 @@
 .btnCont a{
     text-decoration: none;
 }
+@media (max-width: 768px) {
+    .homeContainer{
+        width: 100%;
+    }
+}
