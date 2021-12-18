@@ -115,8 +115,7 @@ function LoremIpsum() {
                         <ButtonGenirate
                             type="submit" 
                             variant="contained"
-                            fullWidth={mediaQuery ? true : false}
-                            style={{marginTop: '10px', display: 'block'}}>
+                            style={{marginTop: '10px', display: 'block', width: '100%'}}>
                                 توليد النص
                         </ButtonGenirate>
                     </div>
