@@ -4,8 +4,10 @@ import SearchIcon from '@mui/icons-material/Search';
 import CircularProgress from '@mui/material/CircularProgress';
 import classes from './lorem.module.css';
 import { ButtonCopy, ButtonGenirate } from '../button/Button'
+import useMediaQuery from '@mui/material/useMediaQuery'
 
 function LoremIpsum() {
+    const mediaQuery = useMediaQuery('(max-width: 576px)');
     const [result, setResult] = useState('');
     const [error, setError] = useState('');
     const [query, setQuery] = useState('');
@@ -110,7 +112,13 @@ function LoremIpsum() {
                         <option value="pr">فقرات</option>
                         <option value="wo">كلمات</option>
                         </select>
-                        <ButtonGenirate type="submit" variant="contained">توليد النص</ButtonGenirate>
+                        <ButtonGenirate
+                            type="submit" 
+                            variant="contained"
+                            fullWidth={mediaQuery ? true : false}
+                            style={{marginTop: '10px', display: 'block'}}>
+                                توليد النص
+                        </ButtonGenirate>
                     </div>
                     <div className={classes.resultCont}>
                         <div className={classes.textCont}>

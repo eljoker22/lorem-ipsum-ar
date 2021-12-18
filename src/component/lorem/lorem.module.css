@@ -107,4 +107,11 @@
     .inputsFlex{
         display: unset;
     }
+    .inputsFlex select{
+        width: 65%;
+    }
+    .inputNumber{
+        margin-left: 10px;
+        width: calc(35% - 10px);
+    }
 }
