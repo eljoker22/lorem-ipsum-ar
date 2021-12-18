@@ -115,7 +115,11 @@ function LoremIpsum() {
                         <ButtonGenirate
                             type="submit" 
                             variant="contained"
-                            style={{marginTop: '10px', display: 'block', width: '100%'}}>
+                            style={{
+                                marginTop: mediaQuery && '10px',
+                                display: mediaQuery && 'block', 
+                                width: mediaQuery && '100%'
+                                }}>
                                 توليد النص
                         </ButtonGenirate>
                     </div>

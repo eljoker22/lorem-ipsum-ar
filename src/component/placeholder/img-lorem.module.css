@@ -38,3 +38,15 @@
 .imgGallery:hover{
     border-color: var(--primary-color);
 }
+@media (max-width: 768px) {
+    .loremCont{
+        display: block;
+    }
+    .loremCont input:first-child{
+        width: 80%;
+        margin-left: 10px;
+    }
+    .loremCont input[type=number] {
+        width: calc(20% - 10px);
+    }
+} 

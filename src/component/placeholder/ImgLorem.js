@@ -5,10 +5,11 @@ import ImageListItem from '@mui/material/ImageListItem';
 import CircularProgress from '@mui/material/CircularProgress';
 import {ButtonGenirate} from '../button/Button'
 import classes from './img-lorem.module.css';
-import Slide from '@mui/material/Slide';
 import PopupImg from '../popup/Popup'
+import useMediaQuery from '@mui/material/useMediaQuery'
 
 function ImgLorem() {
+    const mediaQuery = useMediaQuery('(max-width: 768px)');
     const [query, setQuery] = useState('');
     const [imgNum, setImgNum] = useState(10);
     const [images, setImages] = useState([]);
@@ -52,7 +53,7 @@ function ImgLorem() {
     //console.log(selectImg)
 
     return(
-        <>
+        <div style={{margin: '0 20px'}}>
         <form onSubmit={handleSubmit} style={{margin: '20px 0'}}>
             <div className={classes.loremCont}>
                 <input 
@@ -63,7 +64,16 @@ function ImgLorem() {
                 autoComplete="off"
                 />
                 <input type="number" value={imgNum}  onChange={(e) => setImgNum(e.target.value)} />
-                <ButtonGenirate type="submit" variant="contained">توليد الصور</ButtonGenirate>
+                <ButtonGenirate 
+                    type="submit"
+                    variant="contained" 
+                    style={{
+                        display: mediaQuery && 'block',
+                        marginTop: mediaQuery && '10px',
+                        width: mediaQuery && '100%'
+                    }}>
+                    توليد الصور
+                </ButtonGenirate>
             </div>
         </form>
         <ImageList variant="masonry" cols={3} gap={8}>
@@ -88,7 +98,7 @@ function ImgLorem() {
         {!loading && error.length > 0 && <p>{error}</p>}
         {loading && <CircularProgress style={{color: 'var(--primary-color)', width: '50px', height: '50px'}} />}
         {popup && selectImg && <PopupImg imgurl={selectImg} open={popup} setOpen={setPopup}  />}
-        </>
+        </div>
     )
 }
 export default ImgLorem;
